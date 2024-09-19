@@ -7,11 +7,11 @@ function shiftZero(arr) {
     }
   }
   for (let i = 0; i < arr.length; i++) {
-    if(arr[i] !== 0)
-    {
-        empArr.push(arr[i]);
+    if (arr[i] !== 0) {
+      empArr.push(arr[i]);
     }
   }
+
   console.log(empArr);
 }
 
