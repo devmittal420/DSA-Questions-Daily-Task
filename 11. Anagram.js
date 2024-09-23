@@ -23,6 +23,6 @@ function isAnagram(str1, str2) {
   return true;
 }
 
-const str1 = "dev";
-const str2 = "ved";
+const str1 = "deeev";
+const str2 = "deevv";
 console.log(isAnagram(str1, str2));
