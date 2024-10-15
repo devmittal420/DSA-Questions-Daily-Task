@@ -11,3 +11,5 @@ function isStar(star) {
 
 const k = 5;
 console.log(isStar(k));
+
+
