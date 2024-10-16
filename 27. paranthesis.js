@@ -1,4 +1,4 @@
-function paranthesis(speChar) {
+function isValid(speChar) {
   if (speChar.length % 2 !== 0) {
     return false;
   }
@@ -12,8 +12,6 @@ function paranthesis(speChar) {
     const elem = speChar[i];
     if (register[elem]) {
       const lastElem = empArr.pop();
-      console.log(lastElem);
-
       if (register[elem] !== lastElem) {
         return false;
       }
@@ -21,8 +19,9 @@ function paranthesis(speChar) {
       empArr.push(elem);
     }
   }
-  return true;
+
+  return empArr.length === 0;
 }
 
-const speChar = "{()}";
-console.log(paranthesis(speChar));
+const speChar = "{{}}";
+console.log(isValid(speChar));
