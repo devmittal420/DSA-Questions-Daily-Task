@@ -1,25 +1,20 @@
-function isValid(speChar) {
-  if (speChar.length % 2 !== 0) {
-    return false;
-  }
+function isValid(char) {
   const empArr = [];
   const register = {
     ")": "(",
     "}": "{",
     "]": "[",
   };
-  for (let i = 0; i < speChar.length; i++) {
-    const elem = speChar[i];
-    if (register[elem]) {
-      const lastElem = empArr.pop();
-      if (register[elem] !== lastElem) {
+  for (let i = 0; i < char.length; i++) {
+    if (register[char[i]]) {
+      let last = empArr.pop();
+      if (register[char[i]] !== last) {
         return false;
       }
     } else {
-      empArr.push(elem);
+      empArr.push(char[i]);
     }
   }
-
   return empArr.length === 0;
 }
 
