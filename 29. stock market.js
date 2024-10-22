@@ -5,7 +5,7 @@ function maxProfit(profit) {
 
   for (let i = 1; i < profit.length; i++) {
     if (profit[i] < buy) {
-      buy = profit[i];    // we have to find smallest value
+      buy = profit[i]; // we have to find smallest value
     } else {
       let sell = profit[i] - buy;
 

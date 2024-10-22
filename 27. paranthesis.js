@@ -17,6 +17,5 @@ function isValid(char) {
   }
   return empArr.length === 0;
 }
-
 const speChar = "{{}}";
 console.log(isValid(speChar));
